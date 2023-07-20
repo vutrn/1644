@@ -1,2 +1,36 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container">
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+  <p>{{country}}</p>
+
+  <ul>
+    {{#each sports}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+  <table border="1">
+    <tr>
+      <th>Sports</th>
+    </tr>
+    {{#each sports}}
+    <tr>
+      <td>{{this}}</td>
+    </tr>
+    {{/each}}
+  </table>
+  <button onclick="confirm('???')">TAO</button>
+  <ul class="nav justify-content-center  ">
+      <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page">Active link</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled link</a>
+      </li>
+  </ul>
+</div>
+
+

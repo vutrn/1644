@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var demoRouter = require('./routes/demo'); 
+var greenRouter = require('./routes/green');
 
 var app = express();
 
@@ -21,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/demo', demoRouter); //* /demo/test
+app.use('/green', greenRouter) //* /green/hn
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +41,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(process.env.PORT || 3001)
+//! Default port is 3000
 
 module.exports = app;
