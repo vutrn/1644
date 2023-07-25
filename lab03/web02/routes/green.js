@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 router.get("/hn", (req, res) => {
-  var hanoi = "Ha Noiiii"
+  var hanoi = "Ha Noiii"
   res.render("hanoi", {hn: hanoi});
 });
 
