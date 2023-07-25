@@ -6,11 +6,13 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var fptRouter = require('./routes/fpt')
-var mobileRouter = require('./routes/mobile')
-var laptopRouter = require('./routes/laptop')
 
 var app = express();
+//! Khai báo và sử dụng thư viện body-parser (để lấy dữ liệu từ form)
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
+var hbs = require('hbs');
+hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,11 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//* Khai báo đường dẫn của router
-app.use('/fpt', fptRouter);
-app.use('/mobile', mobileRouter);
-app.use('/laptop', laptopRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,6 +43,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+app.listen(process.env.PORT || 3000)
 
 module.exports = app;

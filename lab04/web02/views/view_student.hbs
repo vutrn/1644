@@ -1,0 +1,42 @@
+<div class="container card bg">
+
+  <h1 class="text-primary">Add new student</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <td>{{student.name}}</td>
+    </tr>
+    <tr>
+      <th>Date of birth</th>
+      <td>{{ dateFormat dob "DD/MM/YYYY" }}{{student.dob}}</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td> {{student.email}}</td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td>
+      <td>{{student.gender}}</td>
+      </td>
+    </tr>
+    <tr>
+      <th>Student year</th>
+      <td>{{student.year}} </td>
+    </tr>
+    <tr>
+      <td>Major</td>
+      <td>
+      <td>{{student.major}} </td>
+      </td>
+    </tr>
+    <tr>
+      <th>Image</th>
+      <td>
+        <img src="{{student.image}}" alt="">
+      </td>
+    </tr>
+
+  </table>
+
+</div>
