@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var uri = 'mongodb://127.0.0.1:27017'
 var online = "mongodb+srv://admin:admin@umbrellacluster.rpaolls.mongodb.net/"
 //! Kiểm tra kết nối đến database
-mongoose.connect(uri)
+mongoose.connect(online)
 .then(() => console.log ("Connect to DB succeed !"))
 .catch((err) => console.log (err));
 
