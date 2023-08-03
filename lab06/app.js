@@ -16,9 +16,11 @@ const mongoose = require("mongoose");
 //! Chỉ có thể connect 1 DB
 const db =
   "mongodb+srv://admin:admin@umbrellacluster.rpaolls.mongodb.net/dbTest";
-
+//! Khai báo kịch bổ
 mongoose
-  .connect(db)
+  .connect(
+    "mongodb+srv://admin:admin@umbrellacluster.rpaolls.mongodb.net/dbTest"
+  )
   .then(() => console.log("DB Connected!"))
   .catch((err) => console.log("error"));
 
