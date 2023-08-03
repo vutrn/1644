@@ -1,0 +1,43 @@
+<p>1sda21</p>
+
+<div class="container">
+  <a href="">Create</a>
+  <a class="warning" href="/mobile/deleteall">Delete All</a>
+  <table role="grid">
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th>Image</th>
+      <th>Best Seller</th>
+      <th>Menu</th>
+    </tr>
+    {{#each mobile }}
+    <tr>
+      <th>{{brandName}}</th>
+      <th>{{phoneModel}}</th>
+      <th>{{quantity}}</th>
+      <th>{{price}}</th>
+      <th>
+        <a href="/mobile/detail/{{_id}}">
+          <img src="{{image}}" width="100">
+        </a>
+      </th>
+      <th><img src="{{img}}" width="100px"></th>
+      <th>{{bestSeller}}</th>
+      <th>
+        <a class="btn btn-primary" href="#">Edit</a>
+        <a onclick="confirmation()" href="/mobile/delete/{{_id}}">Delete</a>
+      </th>
+    </tr>
+    {{/each}}
+  </table>
+</div>
+
+<script>
+  function confirmation() {
+    return confirm("Are you sure to delete this mobile?")
+  }
+</script>
