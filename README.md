@@ -9,6 +9,6 @@
 4. (DB) app.js
 5. (BE) models
 6. (FE) views
-7. pust to github
+7. push to github
 8. deploy on render
 9. lived.
