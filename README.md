@@ -5,11 +5,27 @@
    - npm install 
    - npm install -g nodemon
    - npm install body-parser
+     
    - npm install mongoose@6.11.4 --save
+
+   - npm install --save handlebars-dateformat
+          app.js
+
+          view.hbs
+          {{ dateFormat dob "DD/MM/YYYY" }}
+     
 4. (DB) app.js
-5. Route
-6. (BE) models
-7. (FE) views
-8. push to github
-9. deploy on render
-10. lived.
+          const mongoose = require('mongoose');
+          mongoose.connect("")
+   
+          var hbs = require('hbs');
+          hbs.registerHelper('dateFormat', require('handlebars-dateformat'))
+   
+          var bodyParser = require('body-parser');
+          app.use(bodyParser.urlencoded({ extended : false}))
+6. Route
+7. (BE) models
+8. (FE) views
+9. push to github
+10. deploy on render
+11. lived.
