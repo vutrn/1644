@@ -15,7 +15,7 @@
      
 4. (DB) app.js
           const mongoose = require('mongoose');
-          mongoose.connect("")
+          mongoose.connect("");
    
           var hbs = require('hbs');
           hbs.registerHelper('dateFormat', require('handlebars-dateformat'))
