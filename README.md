@@ -9,7 +9,6 @@
    - npm install mongoose@6.11.4 --save
 
    - npm install --save handlebars-dateformat
-          app.js
 
           view.hbs
           {{ dateFormat dob "DD/MM/YYYY" }}
