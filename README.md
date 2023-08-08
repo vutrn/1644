@@ -14,6 +14,7 @@
           {{ dateFormat dob "DD/MM/YYYY" }}
      
 4. (DB) app.js
+   
           const mongoose = require('mongoose');
           mongoose.connect("");
    
