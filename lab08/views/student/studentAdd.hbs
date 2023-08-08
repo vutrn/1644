@@ -1,0 +1,46 @@
+<div class="container card col-md-8 mt-3 mb-3">
+  <form action="/student/add" method="post">
+    <h5>Add new student</h5>
+    <div class="form-group">
+      <label>Full name</label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+      <label>Birthday</label>
+      <input type="date" name="dob" required>
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      Male<input type="radio" name="gender" value="Male" required>
+      Female<input type="radio" name="gender" value="Female" required>
+    </div>
+    <div class="form-group">
+      <label>Department</label>
+    <select class="form-control" name="department">
+      <option value="Computing">Computing</option>
+      <option value="Business">Business</option>
+      <option value="Graphic Design">Graphic Design</option>
+    </select>
+    </div>
+    <div class="form-group">
+      <label>Class</label>
+      <input type="text" name="class" required>
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" name="image" required>
+    </div>
+    <div class="form-group">
+      <label>GPA</label>
+      <input type="text" name="gpa" required>
+    </div>
+    <div class="form-group">
+      <label>Student Year</label>
+      <input type="number" name="studentYear" min="1" max="4" required>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Add">
+    </div>
+  </form>
+</div>

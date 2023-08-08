@@ -1,0 +1,55 @@
+<div class="container card col-md-8 mt-3 mb-3">
+  <form action="/student/edit/{{student._id}}" method="post">
+    <h5>Edit</h5>
+    <div class="form-group">
+      <label>Full name</label>
+      <input type="text" name="name" value="{{student.name}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Birthday</label>
+      <input type="date" name="dob" value="{{student.dob}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      Male<input type="radio" name="gender" value="{{student.gender}}" required>
+      Female<input type="radio" name="gender" value="{{student.gender}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+    <select class="form-control" name="department">
+      <option value="Computing">Computing</option>
+      <option value="Business">Business</option>
+      <option value="Graphic Design">Graphic Design</option>
+    </select>
+    </div>
+
+    <div class="form-group">
+      <label>Class</label>
+      <input type="text" name="class" value="{{student.class}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Image</label>
+      <img src="/images/{{student.image}}" width="100px">
+      <input type="file" name="image" value="{{student.image}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>GPA</label>
+      <input type="text" name="gpa" value="{{student.gpa}}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Student Year</label>
+      <input type="number" name="studentYear" value="{{student.studentYear}}" min="1" max="4" required>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Edit">
+    </div>
+
+  </form>
+</div>
